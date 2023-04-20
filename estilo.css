@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0 60px;
+    /* espaçamento zero encima e embaixo e 60 nos lados */
+}
+
+header nav ul{
+    display: flex;
+    gap: 32px;
+
+}
+
+header nav ul li{
+    position: relative;
+}
+
+header nav ul li a{
+    display: block;
+    line-height: 46px;
+    color: white;
+    margin: 10px 0;
+}
+
+header nav ul li a.btn{
+    border: 1px solid white;
+    padding: 0 16px;
+    border-radius: 5px;
+    transition-duration: 300ms;
+}
+
+header nav ul li a.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+header nav ul ul{
+    position: absolute;
+    background-color: black;
+    display: block;
+    padding: 0 16px;
+    border-radius: 0 0 10px 10px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* para alinhar as opções com a li de cima */
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 300ms;
+    /* a transição deve ficar sempre no de cime e a parte de baixo vai herder */
+}
+
+header nav ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
